@@ -1,0 +1,350 @@
+<!--日本語である事を指定する-->
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!--文字コードをUTF-8に設定-->
+    <meta charset="UTF-8" />
+    <!--レスポンシブル対応の為にviewport設定を行う-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--タイトル-->
+    <title>城南大学オープンキャンパス - 開催概要</title>
+    <!--BootstrapのcssとAwesomeの読み込み-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+    <!--style.cssの読み込み-->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-light">
+    <!--ナビゲーションバーを定義する-->
+    <nav class="navbar navbar-expand-md navbar-light">
+        <div class="container-fluid">
+            <!--大学のロゴと名前を左に導入する。クリックするとトップへ戻るように設定-->
+            <a class="navbar-brand d-flex align-items-center" href="tittle.html">
+                <!--右にマージンをする。横40px、縦40pxでロゴ画像を導入。-->
+                <img src="img/大学ロゴ.png" alt="城南大学ロゴ" width="40" height="40" class="me-2">
+                城南大学(Jonan University)
+            </a>
+            <!--画面が狭くなった時にメニューの開閉をする(トグルボタン)-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="メニューを切り替え">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!--トグルボタンによって開閉されるナビゲーション項目を右に寄せる-->
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+                    <!--アクセスするリンク-->
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-outline-success px-3 me-2" href="#">アクセス</a>
+                    </li>
+                    <!--ドロップダウンメニュー-->
+                    <li class="nav-item dropdown">
+                        <!--メニューを開くボタンを設定-->
+                        <a class="nav-link dropdown-toggle btn btn-outline-success px-3" href="#" id="menuDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            メニュー
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="menuDropdown">
+                            <!--各メニューのドロップダウン項目とhtml-->
+                            <li><a class="dropdown-item" href="overview.html">開催概要</a></li>
+                            <li><a class="dropdown-item" href="schedule.html">スケジュール</a></li>
+                            <li><a class="dropdown-item" href="faculties.html">学部・学科紹介</a></li>
+                            <li><a class="dropdown-item" href="faq.html">よくある質問</a></li>
+                            <li><a class="dropdown-item" href="entry.html">参加申し込み</a></li>
+                            <li><a class="dropdown-item" href="contact.html">お問い合わせ</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--背景画像はJavaScriptに切り替わるようにする。タイトル、キャッチコピー、説明を記載する。-->
+    <header id="mainHeader">
+        <div class="container">
+            <h1 class="display-4">城南大学 オープンキャンパス</h1>
+            <p class="lead">「ゆるぎなき知性と温かな人材を」</p>
+            <p class="lead" style="max-width: 800px; margin: 1rem auto;">
+                本学は、探究心と論理的思考に裏打ちされた専門知識、そして多様な価値観を尊重し、社会に貢献する温かい心を持った人材の育成を目指します。</p>
+            <p class="lead">是非オープンキャンパスへご参加ください!!</p>
+        </div>
+    </header>
+    <!--メインコンテンツエリア-->
+    <main class="container py-5">
+        <!-- 第一回の開催日、説明、時間、場所、対象者、参加費の項目でオープンキャンパスの日程のセクションを記載する -->
+        <section>
+            <h2 class="section-heading">
+                開催日
+                <span class="sub-heading">EVENT DATES</span>
+            </h2>
+            <p>城南大学オープンキャンパスは、以下の日程で開催されます。</p>
+
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <a href="#registration" class="card-link">
+                        <div class="card h-100 border-success">
+                            <div class="card-body">
+                                <h5 class="card-title text-success">第1回：8月10日（土）</h5>
+                                <ul class="list-unstyled">
+                                    <li><strong>時間：</strong>10:00〜16:00</li>
+                                    <li><strong>場所：</strong>城南大学キャンパス</li>
+                                    <li><strong>対象：</strong>高校生・受験生・保護者</li>
+                                    <li><strong>参加費：</strong>無料（事前申込制）</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- 第二回の開催日、説明、時間、場所、対象者、参加費の項目でオープンキャンパスの日程のセクションを記載する -->
+                <div class="col">
+                    <a href="#registration" class="card-link">
+                        <div class="card h-100 border-success">
+                            <div class="card-body">
+                                <h5 class="card-title text-success">第2回：8月24日（土）</h5>
+                                <ul class="list-unstyled">
+                                    <li><strong>時間：</strong>10:00〜16:00</li>
+                                    <li><strong>場所：</strong>城南大学キャンパス</li>
+                                    <li><strong>対象：</strong>高校生・受験生・保護者</li>
+                                    <li><strong>参加費：</strong>無料（事前申込制）</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- 第三回の開催日、説明、時間、場所、対象者、参加費の項目でオープンキャンパスの日程のセクションを記載する -->
+                <div class="col">
+                    <a href="#registration" class="card-link">
+                        <div class="card h-100 border-success">
+                            <div class="card-body">
+                                <h5 class="card-title text-success">第3回：9月7日（土）</h5>
+                                <ul class="list-unstyled">
+                                    <li><strong>時間：</strong>10:00〜16:00</li>
+                                    <li><strong>場所：</strong>城南大学キャンパス</li>
+                                    <li><strong>対象：</strong>高校生・受験生・保護者</li>
+                                    <li><strong>参加費：</strong>無料（事前申込制）</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- 開催内容のセクションを記載する。 -->
+        <section class="mt-5">
+            <!-- 項目は学科紹介、体験授業、個別相談、キャンパスツアー、学食体験、ノベルティ配布の6つで構成される。 -->
+            <h2 class="section-heading">
+                開催内容
+                <span class="sub-heading">PROGRAM</span>
+            </h2>
+            <div class="content-section">
+                <!-- 折りたたみボタンの設定 -->
+                <div class="accordion-header" data-bs-toggle="collapse" data-bs-target="#collapse1"
+                    aria-expanded="false" aria-controls="collapse1">
+                    <h3>学科紹介</h3><span class="icon text-success"></span>
+                </div>
+                <!-- 折りたたみボタンの内容 -->
+                <div id="collapse1" class="collapse">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>各学科の教員が、4年間の学びの流れや専門分野の魅力を詳しく解説します。</li>
+                            <li>在学生の先輩から、リアルな授業の雰囲気やサークル活動について聞くことができます。</li>
+                            <li>あなたの興味や関心に合った学科がきっと見つかるはずです。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="content-section">
+                <!-- 折りたたみボタンの設定 -->
+                <div class="accordion-header" data-bs-toggle="collapse" data-bs-target="#collapse2"
+                    aria-expanded="false" aria-controls="collapse2">
+                    <h3>体験授業</h3><span class="icon text-success"></span>
+                </div>
+                <!-- 折りたたみボタンの内容 -->
+                <div id="collapse2" class="collapse">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>大学ならではの本格的な模擬授業を体験できます。</li>
+                            <li>興味のある学問分野を深掘りする絶好の機会です。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="content-section">
+                <!-- 折りたたみボタンの設定 -->
+                <div class="accordion-header" data-bs-toggle="collapse" data-bs-target="#collapse3"
+                    aria-expanded="false" aria-controls="collapse3">
+                    <h3>個別相談</h3><span class="icon text-success"></span>
+                </div>
+                <!-- 折りたたみボタンの内容 -->
+                <div id="collapse3" class="collapse">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>入試、奨学金、学生生活など、気になることについて個別で相談できます。</li>
+                            <li>教職員が一人ひとりの質問に丁寧にお答えします。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="content-section">
+                <!-- 折りたたみボタンの設定 -->
+                <div class="accordion-header" data-bs-toggle="collapse" data-bs-target="#collapse4"
+                    aria-expanded="false" aria-controls="collapse4">
+                    <h3>キャンパスツアー</h3><span class="icon text-success"></span>
+                </div>
+                <!-- 折りたたみボタンの内容 -->
+                <div id="collapse4" class="collapse">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>在学生がキャンパス内をご案内します。</li>
+                            <li>大学の雰囲気や充実した施設を実際に見て回ることができます。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="content-section">
+                <!-- 折りたたみボタンの設定 -->
+                <div class="accordion-header" data-bs-toggle="collapse" data-bs-target="#collapse5"
+                    aria-expanded="false" aria-controls="collapse5">
+                    <h3>学食体験</h3><span class="icon text-success"></span>
+                </div>
+                <!-- 折りたたみボタンの内容 -->
+                <div id="collapse5" class="collapse">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>城南大学自慢の学食を無料で体験できます。</li>
+                            <li>学生に人気のメニューをぜひ味わってみてください。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="content-section">
+                <!-- 折りたたみボタンの設定 -->
+                <div class="accordion-header" data-bs-toggle="collapse" data-bs-target="#collapse6"
+                    aria-expanded="false" aria-controls="collapse6">
+                    <h3>ノベルティ配布</h3><span class="icon text-success"></span>
+                </div>
+                <!-- 折りたたみボタンの内容 -->
+                <div id="collapse6" class="collapse">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>ご来場の皆さまにオリジナルグッズをプレゼントします。</li>
+                            <li>数に限りがありますので、お早めにお越しください。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- アクセス情報セクションの追加(Googlemap + 交通案内) -->
+        <section class="mt-5">
+            <h2 class="section-heading">
+                詳細なアクセス情報
+                <span class="sub-heading">CAMPUS ACCESS</span>
+            </h2>
+            <!-- 左にGooglemap、右にアクセス情報に設定 -->
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="ratio ratio-16x9">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.656812847054!2d139.7744883152591!3d35.71006298018784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c1d49933d73%3A0x8382d355a297926!2z5p2x5Lqs6YO96KaL!5e0!3m2!1sja!2sjp!4v1672531200000!5m2!1sja!2sjp"
+                            style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+                <!-- 住所情報、電車案内、バス案内、お車でのアクセス情報を右側に配置する。 -->
+                <div class="col-lg-6">
+                    <ul class="list-unstyled">
+                        <li class="d-flex align-items-start access-item">
+                            <i class="fas fa-map-marker-alt fa-fw me-3 mt-1"></i>
+                            <span><strong>住所</strong><br>東京都城南区大学町1-2-3</span>
+                        </li>
+                        <li class="d-flex align-items-start access-item">
+                            <i class="fas fa-train fa-fw me-3 mt-1"></i>
+                            <span><strong>電車でお越しの場合</strong><br>JR城南線「大学前駅」東口より徒歩5分</span>
+                        </li>
+                        <li class="d-flex align-items-start access-item">
+                            <i class="fas fa-bus-alt fa-fw me-3 mt-1"></i>
+                            <span><strong>バスでお越しの場合</strong><br>市営バス「城南大学」停留所下車すぐ</span>
+                        </li>
+                        <li class="d-flex align-items-start access-item">
+                            <i class="fas fa-parking fa-fw me-3 mt-1"></i>
+                            <span><strong>お車でお越しの場合</strong><br>駐車場の用意はございません。公共交通機関のご利用にご協力ください。</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 参加申し込みのセクションを追加する。タイトル、リード文、告知分、案内文、申し込みボタンを追加する。 -->
+        <section id="registration" class="mt-5 text-center registration-section">
+            <h2 class="text-success">参加申し込み</h2>
+            <p class="lead mt-3">オープンキャンパスへの参加は事前申込制です。</p>
+            <div class="deadline-box">
+                <h4 class="mb-0">申込期間：7月1日(月) 〜 各開催日の3日前まで</h4>
+            </div>
+            <p class="mb-4">下のボタンより申し込みフォームへお進みください。</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSe91aGZqq-LXzCv5CsnOFtpl2w2U3cEDe8ueT33FfO9xn8N_A/viewform"
+                class="btn btn-success btn-lg shadow btn-register" target="_blank" rel="noopener noreferrer">
+                申し込みフォームへ進む
+                <i class="fas fa-arrow-right ms-2"></i>
+            </a>
+            <!-- Font Awesomeの矢印アイコン / ms-2 = 左にスペース -->
+
+            <!-- btn-success = 緑色 / btn-lg = 大きいボタン / shadow = 影付き -->
+
+        </section>
+    </main>
+
+
+    <!-- ページの最下部に年と大学、お問い合わせ先、X (旧Twitter)、Instagram、YouTubeのリンクを表示する。 -->
+    <footer class="bg-dark text-light text-center py-4 mt-5">
+        <div class="container">
+            <p>© 2025 城南大学</p>
+            <p>お問い合わせ: info@example.ac.jp</p>
+            <div class="mt-2">
+                <a href="#" class="text-light me-2">X (旧Twitter)</a>
+                <a href="#" class="text-light me-2">Instagram</a>
+                <a href="#" class="text-light">YouTube</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- JavaScriptのコードをここに記述する。 -->
+    <script>
+        // イベントリスナー：ページのHTMLが全て読み込まれた後に実行されるように設定する。
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // ヘッダー要素（id="mainHeader"）を取得して、定数mainHeaderに格納する。
+            const mainHeader = document.getElementById('mainHeader');
+
+            // 背景画像として使用する画像のファイル名を配列（リスト）に格納する。
+            const images = [
+                'img/大学.png', 'img/大学2.png', 'img/大学3.png',
+            ];
+
+            let currentIndex = 0;
+
+            // 背景画像を切り替えるための関数を定義する。
+            function changeBackgroundImage() {
+
+                // ヘッダー要素の背景画像スタイルを、ヘッダーの背景として設定する。
+                mainHeader.style.backgroundImage = `url('${images[currentIndex]}')`;
+
+                // 次の画像のインデックスを計算し、配列の長さで割った余りを使用して循環させる。
+                currentIndex = (currentIndex + 1) % images.length;
+            }
+            //    4秒ごとに背景画像を変更させる。
+            setInterval(changeBackgroundImage, 4000);
+            // ページが読み込まれた際に、最初の画像をすぐに表示する。
+            changeBackgroundImage();
+        });
+    </script>
+    <!-- BootstrapのJavaScriptを読み込む。 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

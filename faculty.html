@@ -1,0 +1,196 @@
+<!--日本語である事を指定する-->
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!--文字コードをUTF-8に設定-->
+    <meta charset="UTF-8" />
+    <!--レスポンシブル対応の為にviewport設定を行う-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--タイトル-->
+    <title>学部紹介 | 城南大学オープンキャンパス</title>
+    <!--BootstrapのcssとAwesomeの読み込み-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!--style.cssの読み込み-->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-light">
+    <!--ナビゲーションバーを定義する-->
+    <nav class="navbar navbar-expand-md navbar-light">
+        <div class="container-fluid">
+            <!--大学のロゴと名前を左に導入する。クリックするとトップへ戻るように設定-->
+            <a class="navbar-brand d-flex align-items-center" href="tittle.html">
+                <!--右にマージンをする。横40px、縦40pxでロゴ画像を導入。-->
+                <img src="img/大学ロゴ.png" alt="城南大学ロゴ" width="40" height="40" class="me-2">
+                城南大学(Jonan University)
+            </a>
+            <!--画面が狭くなった時にメニューの開閉をする(トグルボタン)-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="メニューを切り替え">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!--トグルボタンによって開閉されるナビゲーション項目を右に寄せる-->
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+                    <!--アクセスするリンク-->
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-outline-success px-3 me-2" href="#">アクセス</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <!--メニューを開くボタンを設定-->
+                        <a class="nav-link dropdown-toggle btn btn-outline-success px-3" href="#" id="menuDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            メニュー
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="menuDropdown">
+                            <!--各メニューのドロップダウン項目とhtml-->
+                            <li><a class="dropdown-item" href="overview.html">開催概要</a></li>
+                            <li><a class="dropdown-item" href="ex00.html">スケジュール</a></li>
+                            <li><a class="dropdown-item" href="faculty-portal.html">学部・学科紹介</a></li>
+                            <li><a class="dropdown-item" href="ex00.html">よくある質問</a></li>
+                            <li><a class="dropdown-item" href="ex00.html">参加申し込み</a></li>
+                            <li><a class="dropdown-item" href="ex00.html">お問い合わせ</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--背景画像はJavaScriptに切り替わるようにする。タイトル、キャッチコピー、説明を記載する。-->
+    <header id="mainHeader">
+        <div class="container">
+            <h1 class="display-4">城南大学 オープンキャンパス</h1>
+            <p class="lead">「ゆるぎなき知性と温かな人材を」</p>
+            <p class="lead" style="max-width: 800px; margin: 1rem auto;">
+                本学は、探究心と論理的思考に裏打ちされた専門知識、そして多様な価値観を尊重し、社会に貢献する温かい心を持った人材の育成を目指します。</p>
+            <p class="lead">是非オープンキャンパスへご参加ください!!</p>
+        </div>
+    </header>
+
+    <main class="container py-5">
+        <section class="text-center mb-5">
+            <h2 class="section-heading">
+                学部紹介
+
+            </h2>
+            <p class="lead text-dark">
+                興味のある学部をクリックして詳細をご覧ください。</p>
+        </section>
+
+        <div class="row g-4 justify-content-center">
+
+            <div class="col-lg-4 col-md-6">
+                <a href="#" class="faculty-card-link">
+                    <div class="faculty-grid-card" style="background-image: url('img/economy.png');">
+                        <div class="faculty-card-content">
+                            <h3 class="faculty-grid-title">経済学部</h3>
+
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <a href="#" class="faculty-card-link">
+                    <div class="faculty-grid-card" style="background-image: url('img/sports.png');">
+                        <div class="faculty-card-content">
+                            <h3 class="faculty-grid-title">スポーツ学部</h3>
+
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <a href="#" class="faculty-card-link">
+                    <div class="faculty-grid-card" style="background-image: url('img/literature.png');">
+                        <div class="faculty-card-content">
+                            <h3 class="faculty-grid-title">文学部</h3>
+
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <a href="#" class="faculty-card-link">
+                    <div class="faculty-grid-card" style="background-image: url('img/social.png');">
+                        <div class="faculty-card-content">
+                            <h3 class="faculty-grid-title">社会科学部</h3>
+
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <a href="#" class="faculty-card-link">
+                    <div class="faculty-grid-card" style="background-image: url('img/informatics.png');">
+                        <div class="faculty-card-content">
+                            <h3 class="faculty-grid-title">情報学部</h3>
+
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <a href="#" class="faculty-card-link">
+                    <div class="faculty-grid-card" style="background-image: url('img/medicine.png');">
+                        <div class="faculty-card-content">
+                            <h3 class="faculty-grid-title">医学部</h3>
+
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-dark text-light text-center py-4 mt-5">
+        <div class="container">
+            <p>&copy; 2025 城南大学</p>
+            <p>お問い合わせ: info@example.ac.jp</p>
+            <div class="mt-2">
+                <a href="#" class="text-light me-2">X (旧Twitter)</a>
+                <a href="#" class="text-light me-2">Instagram</a>
+                <a href="#" class="text-light">YouTube</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+
+        // イベントリスナー：ページのHTMLが全て読み込まれた後に実行されるように設定する。
+        document.addEventListener('DOMContentLoaded', () => {
+            // ヘッダー要素（id="mainHeader"）を取得して、定数mainHeaderに格納する。
+            const mainHeader = document.getElementById('mainHeader');
+
+            // 背景画像として使用する画像のファイル名を配列（リスト）に格納する。
+            const images = [
+                'img/大学.png',
+                'img/大学2.png',
+                'img/大学3.png',
+            ];
+            let currentIndex = 0;
+
+            // 背景画像を切り替えるための関数を定義する。
+            function changeBackgroundImage() {
+                // ヘッダー要素の背景画像スタイルを、ヘッダーの背景として設定する。
+                mainHeader.style.backgroundImage = `url('${images[currentIndex]}')`;
+                // 次の画像のインデックスを計算し、配列の長さで割った余りを使用して循環させる。
+                currentIndex = (currentIndex + 1) % images.length;
+            }
+            //    4秒ごとに背景画像を変更させる。
+            setInterval(changeBackgroundImage, 4000);
+            // ページが読み込まれた際に、最初の画像をすぐに表示する。
+            changeBackgroundImage();
+        });
+    </script>
+    <!-- BootstrapのJavaScriptを読み込む。 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,343 @@
+/* スムーズスクロールを有効化する為に設定 */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ヘッダー分の余白をボディ上部に確保する。理由としてナビバーが固定されている為。 */
+body {
+    padding-top: 96px;
+}
+
+/* ヘッダー全体のデザイン設定をする。背景画像、文字色等。 */
+header {
+    background-size: cover;
+    /* 背景画像を要素に合わせて拡大縮小 */
+    background-position: center 60%;
+    /* 画像の表示位置（少し下寄せ） */
+    background-repeat: no-repeat;
+    transition: background-image 1.5s ease-in-out;
+    /* 背景画像切り替えのアニメーション */
+    position: relative;
+    color: #e8f5e9;
+    min-height: 600px;
+    /* 最小高さ */
+}
+
+/* ヘッダーの暗めのオーバーレイに設定。(読みやすくする) */
+header::before {
+    content: "";
+    background: rgba(0, 0, 0, 0.2);
+    /* 黒の半透明に設定。 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+/* ヘッダー内のテキストを中央揃えに設定。 */
+header .container {
+    position: relative;
+    z-index: 2;
+    padding: 60px 15px;
+    text-align: center;
+}
+
+/* タイトル文字の装飾 */
+header .container h1 {
+    font-weight: 800;
+    font-size: 3.5rem;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    letter-spacing: 0.1em;
+}
+
+/* キャッチコピーなどの説明文の装飾 */
+header .container p {
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+    letter-spacing: 0.05em;
+    line-height: 1.8;
+}
+
+/* キャッチコピーのマージン調整 */
+header .container h1+p.lead {
+    margin-top: 3rem;
+}
+
+/* ナビゲーションバーのスタイル設定 */
+.navbar {
+    padding: 1.5rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.9);
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+    /* 背景ぼかし効果 */
+}
+
+/* ロゴ横の大学名 */
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* ロゴ画像の余白 */
+.navbar-brand img {
+    margin-right: 10px;
+}
+
+/* カード全体のデザインとアニメーション */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+    border: 2px solid transparent;
+    background-color: #fff;
+    border-radius: 1rem;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* カードのホバー時のスタイル変化 */
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 12px 25px rgba(0, 128, 0, 0.25);
+    border: 2px solid #198754;
+    background: linear-gradient(135deg, #e9fce9, #ffffff);
+}
+
+/* カードのタイトル文字 */
+.card-title {
+    transition: color 0.3s ease;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* カード本文の文字サイズと行間 */
+.card-text {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* ホバー時のタイトル色変更 */
+.card:hover .card-title {
+    color: #198754;
+}
+
+/* カード全体リンク化 */
+.card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.card-link:hover {
+    color: inherit;
+}
+
+/* 開催内容の各項目（アコーディオン）の枠デザイン */
+.content-section {
+    border-left: 5px solid #198754;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    padding: 0;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+/* アコーディオンの見出しエリア */
+.content-section .accordion-header {
+    cursor: pointer;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* アコーディオンの見出しの文字 */
+.content-section .accordion-header h3 {
+    font-weight: bold;
+    color: #198754;
+    margin-bottom: 0;
+}
+
+/* アコーディオンの本文部分 */
+.content-section .accordion-body {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+}
+
+.accordion-body ul {
+    padding-left: 1.2rem;
+    margin-bottom: 0;
+}
+
+/* アイコン表示（＋） */
+.accordion-header .icon::before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f067";
+    /* プラス記号 */
+    transition: transform 0.3s ease;
+}
+
+/* 展開時のアイコン（回転） */
+.accordion-header [aria-expanded="true"] .icon::before {
+    transform: rotate(45deg);
+    /* ×に見せる */
+    content: "\f067";
+}
+
+/* 各セクションの説明文 */
+main>section>p {
+    font-size: 1.2rem;
+}
+
+/* カード内のコンテンツの余白調整・縦配置 */
+.card-body {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+/* リスト項目の文字サイズ */
+.card-body ul li,
+.accordion-body ul li {
+    font-size: 1.2rem;
+}
+
+/* アクセス情報のスタイル */
+.access-item {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+/* アクセスアイコンの色（緑） */
+.access-item .fa-fw {
+    color: #198754;
+}
+
+/* 参加申し込みセクションの背景と装飾 */
+.registration-section {
+    background-color: #e8f5e9;
+    border-radius: 1rem;
+    padding: 3rem 1.5rem;
+}
+
+/* 申込締切のボックスデザインの設定。 */
+.deadline-box {
+    display: inline-block;
+    border: 2px dashed #198754;
+    padding: 1rem 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    background-color: #fff;
+}
+
+/* 申し込みボタンのホバー効果 */
+.btn-register {
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+
+.btn-register:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* セクションタイトルの見た目の設定。 */
+.section-heading {
+    position: relative;
+    padding-left: 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #dee2e6;
+    margin-bottom: 2rem;
+    font-size: 2.25rem;
+    font-weight: bold;
+    color: #000000;
+}
+
+/* 左の緑ラインを設定。 */
+.section-heading::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px;
+    bottom: 5px;
+    width: 6px;
+    background-color: #28a745;
+    border-radius: 3px;
+}
+
+/* 英語の小見出し */
+.section-heading .sub-heading {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #6c757d;
+    letter-spacing: 0.05em;
+    margin-top: 0.25rem;
+}
+
+
+/* 学部カード全体をクリック可能にする */
+.faculty-card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    border-radius: 1rem;
+}
+
+/* 学部カードの背景画像とレイアウト設定 */
+.faculty-grid-card {
+    position: relative;
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 1rem;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    color: #fff;
+    text-align: left;
+}
+
+/* カード内のテキストエリア */
+.faculty-card-content {
+    position: relative;
+    z-index: 2;
+    padding: 1.5rem;
+    width: 100%;
+}
+
+/* 学部カードの黒いオーバーレイ（下から上へ） */
+.faculty-grid-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 20%, rgba(0, 0, 0, 0) 60%);
+    z-index: 1;
+    transition: background-color 0.3s ease;
+}
+
+/* 学部名の大きさや色の表示 */
+.faculty-grid-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    margin-bottom: 0.25rem;
+}
+
+/* 英語表記のサブタイトルの大きさや色の調整。 */
+.faculty-grid-subtitle {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    opacity: 0.9;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}

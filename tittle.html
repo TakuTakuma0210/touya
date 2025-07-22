@@ -1,0 +1,230 @@
+<!--日本語である事を指定する-->
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!--文字コードをUTF-8に設定-->
+    <meta charset="UTF-8" />
+    <!--レスポンシブル対応の為にviewport設定を行う-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--タイトル-->
+    <title>城南大学オープンキャンパス</title>
+    <!--Bootstrapのcssの読み込み-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--style.cssの読み込み-->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-light">
+    <!--ナビゲーションバーを定義する-->
+    <nav class="navbar navbar-expand-md navbar-light">
+        <div class="container-fluid">
+            <!--大学のロゴと名前を左に導入する。クリックするとトップへ戻るように設定-->
+            <a class="navbar-brand d-flex align-items-center" href="tittle.html">
+                <!--右にマージンをする。横40px、縦40pxでロゴ画像を導入。-->
+                <img src="img/大学ロゴ.png" alt="城南大学ロゴ" width="40" height="40" class="me-2">
+                城南大学(Jonan University)
+            </a>
+            <!--画面が狭くなった時にメニューの開閉をする(トグルボタン)-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="メニューを切り替え">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!--トグルボタンによって開閉されるナビゲーション項目を右に寄せる-->
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+                    <!--アクセスするリンク-->
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-outline-success px-3 me-2" href="#">アクセス</a>
+                    </li>
+                    <!--ドロップダウンメニュー-->
+                    <li class="nav-item dropdown">
+                        <!--メニューを開くボタンを設定-->
+                        <a class="nav-link dropdown-toggle btn btn-outline-success px-3" href="#" id="menuDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            メニュー
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="menuDropdown">
+                            <!--各メニューのドロップダウン項目とhtml-->
+                            <li><a class="dropdown-item" href="overview.html">開催概要</a></li>
+                            <li><a class="dropdown-item" href="ex00.html">スケジュール</a></li>
+                            <li><a class="dropdown-item" href="faculty.html">学部・学科紹介</a></li>
+                            <li><a class="dropdown-item" href="ex00.html">よくある質問</a></li>
+                            <li><a class="dropdown-item" href="ex00.html">参加申し込み</a></li>
+                            <li><a class="dropdown-item" href="ex00.html">お問い合わせ</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--背景画像はJavaScriptに切り替わるようにする。タイトル、キャッチコピー、説明を記載する。-->
+    <header id="mainHeader">
+        <div class="container">
+            <h1 class="display-4">城南大学 オープンキャンパス</h1>
+            <p class="lead">「ゆるぎなき知性と温かな人材を」</p>
+            <p class="lead" style="max-width: 800px; margin: 1rem auto;">
+                本学は、探究心と論理的思考に裏打ちされた専門知識、そして多様な価値観を尊重し、社会に貢献する温かい心を持った人材の育成を目指します。</p>
+            <p class="lead">是非オープンキャンパスへご参加ください!!</p>
+        </div>
+    </header>
+    <!--メインコンテンツエリア-->
+    <main class="container py-5">
+        <!--最新情報のテーブルを表示する-->
+        <section class="mb-5 text-center">
+            <h2 class="mb-4 text-success">オープンキャンパス 最新情報</h2>
+            <div class="mx-auto fs-5">
+                <!--最新情報のテーブルをレスポンシブル対応させ、カテゴリ、内容を表示。-->
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped align-middle">
+                        <thead class="table-success">
+
+                            <tr>
+                                <th scope="col" style="width: 20%;">カテゴリ</th>
+                                <th scope="col">内容</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!--各行にカテゴリと内容を記載。-->
+                            <tr>
+                                <th scope="row">申込状況</th>
+                                <td>事前申込者数が1,000名を突破しました。多数のお申し込み、ありがとうございます！</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">追加企画</th>
+                                <td>経済学部にて、金融のプロを招いた特別講演の開催が決定しました。</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">満席情報</th>
+                                <td>工学部の「ロボット製作体験」は、ご好評につき定員に達しました。</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">オンライン</th>
+                                <td>遠方の方も参加可能！大学説明会・入試説明会のライブ配信が決定しました。</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!--テーブルの下に補足内容を記載-->
+                <p class="text-center mt-4 fs-4">
+                    各プログラムの詳細は以下のページをご確認ください。<br>
+                    皆様のご参加を心よりお待ちしております。
+                </p>
+            </div>
+        </section>
+        <!-- 各種案内のカード群をグレイトアウトで表示する。 タイトル、説明、詳細を見るボタンをそれぞれ追加する。-->
+        <div class="row g-4">
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-success">開催概要</h5>
+                        <p class="card-text">日時、場所、アクセス方法など、オープンキャンパスの基本情報はこちら。</p>
+                        <a href="overview.html" class="btn btn-success mt-auto">詳細を見る</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 上記と同様でグレイトアウトで表示する。タイトル、説明、詳細を見るボタンをそれぞれ追加する。 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-success">スケジュール</h5>
+                        <p class="card-text">当日のプログラムやタイムスケジュールを確認できます。</p>
+                        <a href="ex00.html" class="btn btn-success mt-auto">詳細を見る</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 上記と同様でグレイトアウトで表示する。タイトル、説明、詳細を見るボタンをそれぞれ追加する。 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-success">学部・学科紹介</h5>
+                        <p class="card-text">各学部・学科の特色や魅力を詳しくご紹介します。</p>
+                        <a href="faculty.html" class="btn btn-success mt-auto">詳細を見る</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 上記と同様でグレイトアウトで表示する。タイトル、説明、詳細を見るボタンをそれぞれ追加する。 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-success">よくある質問</h5>
+                        <p class="card-text">参加に関する疑問や不安はこちらで解決！</p>
+                        <a href="ex00.html" class="btn btn-success mt-auto">詳細を見る</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 上記と同様でグレイトアウトで表示する。タイトル、説明、詳細を見るボタンをそれぞれ追加する。 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-success">参加申し込み</h5>
+                        <p class="card-text">オープンキャンパスへの参加には事前申し込みが必要です。</p>
+                        <a href="ex00.html" class="btn btn-success mt-auto">申し込む</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 上記と同様でグレイトアウトで表示する。タイトル、説明、詳細を見るボタンをそれぞれ追加する。 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-success">お問い合わせ</h5>
+                        <p class="card-text">ご不明な点はこちらから。お気軽にご連絡ください。</p>
+                        <a href="contact.html" class="btn btn-success mt-auto">問い合わせる</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- ページの最下部に年と大学、お問い合わせ先、X (旧Twitter)、Instagram、YouTubeのリンクを表示する。 -->
+    <footer class="bg-dark text-light text-center py-4 mt-5">
+        <div class="container">
+            <p>&copy; 2025 城南大学</p>
+            <p>お問い合わせ: info@example.ac.jp</p>
+            <div class="mt-2">
+                <a href="#" class="text-light me-2">X (旧Twitter)</a>
+                <a href="#" class="text-light me-2">Instagram</a>
+                <a href="#" class="text-light">YouTube</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScriptのコードをここに記述する。 -->
+    <script>
+       
+
+        // イベントリスナー：ページのHTMLが全て読み込まれた後に実行されるように設定する。
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // ヘッダー要素（id="mainHeader"）を取得して、定数mainHeaderに格納する。
+            const mainHeader = document.getElementById('mainHeader');
+
+            // 背景画像として使用する画像のファイル名を配列（リスト）に格納する。
+            
+            const images = [
+                'img/大学.png',
+                'img/大学2.png',
+                'img/大学3.png',
+            ];
+           
+            let currentIndex = 0;
+
+            // 背景画像を切り替えるための関数を定義する。
+            function changeBackgroundImage() {
+                // ヘッダー要素の背景画像スタイルを、ヘッダーの背景として設定する。
+                mainHeader.style.backgroundImage = `url('${images[currentIndex]}')`;
+                // 次の画像のインデックスを計算し、配列の長さで割った余りを使用して循環させる。
+                currentIndex = (currentIndex + 1) % images.length;
+            }
+
+        //    4秒ごとに背景画像を変更させる。
+            setInterval(changeBackgroundImage, 4000);
+
+            // ページが読み込まれた際に、最初の画像をすぐに表示する。
+            changeBackgroundImage();
+        });
+    </script>
+    <!-- BootstrapのJavaScriptを読み込む。 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
